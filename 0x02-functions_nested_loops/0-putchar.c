@@ -1,14 +1,19 @@
-#include <stdio.h>
-#include <main.h>
-
+#include "main.h"
+/**
+ * main - Entry point
+ * Description - A program that prints _putchar
+ * Return: 0 Always
+ */
 int main(void)
 {
-	int n;
-
-	for (n = 0; n <= 9; n++)
-	{
-		putchar(n + 48);
-	}
-	putchar('\n');
+	_putchar('-');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
