@@ -1,9 +1,11 @@
 #include "main.h"
 /**
- * print_sign - Entry point
+ * print_sign- Determine if the input number
+ * greater than, equal or less than zero
  * @n: The ASCII code
  * Description - A  function that prints the sign of a number
- * return: 1 greater than n, 0 when 0 and -1 when less than 1
+ * Return: 1 greater than zero, 0 is zero,
+ * -1 less than zero
  */
 int print_sign(int n)
 {
