@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isalpha(int c) - Entry point
+ * _isalpha - Entry point
  * @c: The ASCII code
  * Description - A  function that checks for alphabetic character
  * Return: 1 when letter, 0 when not
