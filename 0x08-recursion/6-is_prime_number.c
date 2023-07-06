@@ -25,7 +25,7 @@ int actual_prime(int n, int i)
 {
 	if (n % i == 0)
 	{
-		if (n == 1)
+		if (n == i)
 			return (1);
 		else
 			return (0);
