@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints its name
- * @argc - number of command line args
- * @argv - arrays of command line
+ * @argc: number of command line args
+ * @argv: arrays of command line
  *
  * Return: 0 Always
  */
