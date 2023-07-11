@@ -20,11 +20,11 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 
 	p = malloc((i + j + 1) * sizeof(char));
+	
 	if (p == NULL)
-	{
-		free(p);
+		free (p);
 		return (NULL);
-	}
+
 	for (k = 0; k < i; k++)
 		p[k] = s1[k];
 	l = j;
