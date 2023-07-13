@@ -3,14 +3,16 @@
 /**
  * malloc_checked -  a function that allocates memory using malloc
  * @b: Number of memory in bytes
+ *
  * Return: 98 if failed
  */
 void *malloc_checked(unsigned int b)
 {
 	int *ptr;
+
 	ptr = malloc(b);
 
-	if (ptr == NULL)
+i	if (ptr == NULL)
 	{
 		exit(98);
 	}
