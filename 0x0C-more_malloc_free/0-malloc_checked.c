@@ -7,8 +7,9 @@
  * Return: Pointer
  */
 void *malloc_checked(unsigned int b)
-{
-	void *ptr = malloc(b);
+
+	int *ptr;
+	ptr = malloc(b);
 
 	if (malloc == NULL)
 	{
