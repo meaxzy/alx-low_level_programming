@@ -1,51 +1,53 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "dog.h"
+#include "stdlib.h"
+
 /**
- * new_dog - entry point
- * @name: size of triangle
- * @age: size of triangle
- * @owner: size of triangle
- * Description: --
- * Return: --
+ * new_dog - new dog function
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ *
+ * Return: NULL if fails.
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
-	int i;
-	int ownerL = 0;
-	int nameL = 0;
+	dog_t *new_dog;
+	char *a, *b;
+	int i = 0, j = 0, k, l;
 
-	while (name[nameL])
-		nameL++;
-	while (owner[ownerL])
-		ownerL++;
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
+	if (name == NULL || owner == NULL)
 		return (NULL);
-	dog->name = malloc(sizeof(char) * (nameL + 1));
-	if (dog->name == NULL)
+	while (name[i] != '\0')
 	{
-		free(dog);
+		i++;
+	}
+	while (owner[j] != '\0')
+	{
+		j++;
+	}
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
 		return (NULL);
-	}
-	for (i = 0; name[i] != '\0'; i++)
+	a = malloc(sizeof(char) * i + 1);
+	if (a == NULL)
 	{
-		dog->name[i] = name[i];
-	}
-	dog->name[i] = '\0';
-	dog->owner = malloc(sizeof(char) * (ownerL + 1));
-	if (dog->owner == NULL)
-	{
-		free(dog->name);
-		free(dog);
+		free(new_dog);
 		return (NULL);
 	}
-	for (i = 0; owner[i] != '\0'; i++)
+	b = malloc(sizeof(char) * j + 1);
+	if (b == NULL)
 	{
-		dog->owner[i] = owner[i];
+		free(new_dog);
+		free(a);
+		return (NULL);
 	}
-	dog->owner[i] = '\0';
-	dog->age = age;
-	return (dog);
+	for (k = 0; k <= i; k++)
+		a[k] = name[k];
+	for (l = 0; l <= j; l++)
+		b[l] = owner[l];
+	new_dog->name = a;
+	new_dog->age = age;
+	new_dog->owner = b;
+	return (new_dog);
 }
