@@ -2,7 +2,7 @@
 
 
 /**
- * init_dog - initialize dog function
+ * init_dog - the new struct dog to be initialize
  * @d: dog function
  * @name: dog name
  * @age: dog age
