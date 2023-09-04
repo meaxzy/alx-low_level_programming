@@ -19,9 +19,11 @@ Ssize_t read_textfile(const char *filename, size_t letters)
 		Return (0);
 
 	Storage = malloc(sizeof(char) * letters);
+	/* allocating memory */
 
 	If (storage == NULL)
 		Return (0);
+	/* checking if malloc was succesful */
 
 	Op = open(filename, O_RDONLY); /* opens file in read only mode*/
 	R = read(op, storage, letters);
@@ -37,4 +39,5 @@ Ssize_t read_textfile(const char *filename, size_t letters)
 	Close(op);
 
 	Return (wr);
+	/* returning bytes stored in wr.*/
 }
