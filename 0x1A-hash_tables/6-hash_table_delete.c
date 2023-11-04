@@ -3,6 +3,8 @@
 /**
  * hash_table_delete - Deletes a hash table.
  * @ht: The hash table to delete.
+ *
+ * Return: Void
  */
 void hash_table_delete(hash_table_t *ht)
 {
@@ -10,7 +12,7 @@ void hash_table_delete(hash_table_t *ht)
     hash_node_t *current, *temp;
 
     if (ht == NULL)
-        return(NULL);
+        return;
 
     for (index = 0; index < ht->size; index++)
     {
